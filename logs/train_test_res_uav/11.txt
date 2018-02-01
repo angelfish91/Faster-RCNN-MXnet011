@@ -1,0 +1,633 @@
+INFO:root:Called with argument: Namespace(dataset='PascalVOC', dataset_path='data/VOCdevkit', epoch=11, gpu=3, has_rpn=True, image_set='2007_test', network='resnet', prefix='model/resnet-uav/e2e', proposal='rpn', root_path='data', shuffle=False, thresh=0.001, vis=False)
+{'ANCHOR_RATIOS': [0.5, 1, 2],
+ 'ANCHOR_SCALES': [8, 16, 32],
+ 'FIXED_PARAMS': ['conv0', 'stage1', 'gamma', 'beta'],
+ 'FIXED_PARAMS_SHARED': ['conv0',
+                         'stage1',
+                         'stage2',
+                         'stage3',
+                         'gamma',
+                         'beta'],
+ 'IMAGE_STRIDE': 0,
+ 'NUM_ANCHORS': 9,
+ 'NUM_CLASSES': 3,
+ 'PIXEL_MEANS': array([0, 0, 0]),
+ 'RCNN_FEAT_STRIDE': 16,
+ 'RPN_FEAT_STRIDE': 16,
+ 'SCALES': [(600, 1000)],
+ 'TEST': {'BATCH_IMAGES': 1,
+          'CXX_PROPOSAL': True,
+          'ENABLE_DEFORMABLE_ROIPOOLING': False,
+          'HAS_RPN': True,
+          'NMS': 0.3,
+          'PROPOSAL_MIN_SIZE': 16,
+          'PROPOSAL_NMS_THRESH': 0.7,
+          'PROPOSAL_POST_NMS_TOP_N': 2000,
+          'PROPOSAL_PRE_NMS_TOP_N': 20000,
+          'RPN_MIN_SIZE': 16,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 300,
+          'RPN_PRE_NMS_TOP_N': 6000},
+ 'TRAIN': {'ASPECT_GROUPING': True,
+           'BATCH_IMAGES': 2,
+           'BATCH_ROIS': 128,
+           'BATCH_ROIS_OHEM': 128,
+           'BBOX_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZATION_PRECOMPUTED': False,
+           'BBOX_REGRESSION_THRESH': 0.5,
+           'BBOX_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_WEIGHTS': array([ 1.,  1.,  1.,  1.]),
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CXX_PROPOSAL': True,
+           'ENABLE_DEFORMABLE_ROIPOOLING': False,
+           'ENABLE_FOCALLOSS': False,
+           'ENABLE_OHEM': False,
+           'END2END': False,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'RPN_BATCH_SIZE': 256,
+           'RPN_BBOX_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 16,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 12000}}
+INFO:root:voc_2007_test num_images 564
+INFO:root:voc_2007_test gt roidb loaded from data/cache/voc_2007_test_gt_roidb.pkl
+[17:48:27] src/operator/././cudnn_algoreg-inl.h:112: Running performance tests to find the best convolution algorithm, this can take a while... (setting env variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+INFO:root:testing 0/564 data 0.1487s net 7.5377s post 0.0008s
+[17:48:48] src/operator/././cudnn_algoreg-inl.h:112: Running performance tests to find the best convolution algorithm, this can take a while... (setting env variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+INFO:root:testing 1/564 data 0.0601s net 8.4705s post 0.0007s
+INFO:root:testing 2/564 data 0.0594s net 0.1180s post 0.0010s
+INFO:root:testing 3/564 data 0.0476s net 0.1178s post 0.0006s
+INFO:root:testing 4/564 data 0.0470s net 0.1205s post 0.0009s
+INFO:root:testing 5/564 data 0.0459s net 0.1184s post 0.0005s
+INFO:root:testing 6/564 data 0.0463s net 0.1165s post 0.0004s
+INFO:root:testing 7/564 data 0.0456s net 0.1189s post 0.0008s
+INFO:root:testing 8/564 data 0.1667s net 0.1422s post 0.0007s
+INFO:root:testing 9/564 data 0.1525s net 0.1112s post 0.0003s
+INFO:root:testing 10/564 data 0.0460s net 0.1606s post 0.0006s
+INFO:root:testing 11/564 data 0.0462s net 0.1200s post 0.0005s
+INFO:root:testing 12/564 data 0.0467s net 0.1203s post 0.0006s
+INFO:root:testing 13/564 data 0.0496s net 0.1165s post 0.0008s
+INFO:root:testing 14/564 data 0.0458s net 0.1208s post 0.0005s
+INFO:root:testing 15/564 data 0.1524s net 0.1465s post 0.0004s
+INFO:root:testing 16/564 data 0.0481s net 0.1581s post 0.0004s
+INFO:root:testing 17/564 data 0.0494s net 0.1189s post 0.0005s
+INFO:root:testing 18/564 data 0.0472s net 0.1200s post 0.0006s
+INFO:root:testing 19/564 data 0.1541s net 0.1464s post 0.0007s
+INFO:root:testing 20/564 data 0.1562s net 0.1129s post 0.0013s
+INFO:root:testing 21/564 data 0.0460s net 0.1568s post 0.0004s
+INFO:root:testing 22/564 data 0.0494s net 0.1190s post 0.0005s
+INFO:root:testing 23/564 data 0.0462s net 0.1169s post 0.0005s
+INFO:root:testing 24/564 data 0.0455s net 0.1187s post 0.0005s
+INFO:root:testing 25/564 data 0.0474s net 0.1185s post 0.0005s
+INFO:root:testing 26/564 data 0.0498s net 0.1173s post 0.0005s
+INFO:root:testing 27/564 data 0.0474s net 0.1208s post 0.0007s
+INFO:root:testing 28/564 data 0.0454s net 0.1191s post 0.0005s
+INFO:root:testing 29/564 data 0.0494s net 0.1180s post 0.0007s
+INFO:root:testing 30/564 data 0.1530s net 0.1461s post 0.0008s
+INFO:root:testing 31/564 data 0.0470s net 0.1568s post 0.0004s
+INFO:root:testing 32/564 data 0.0479s net 0.1211s post 0.0005s
+INFO:root:testing 33/564 data 0.1535s net 0.1432s post 0.0006s
+INFO:root:testing 34/564 data 0.0477s net 0.1577s post 0.0006s
+INFO:root:testing 35/564 data 0.0513s net 0.1185s post 0.0006s
+INFO:root:testing 36/564 data 0.0450s net 0.1215s post 0.0004s
+INFO:root:testing 37/564 data 0.0434s net 0.1205s post 0.0004s
+INFO:root:testing 38/564 data 0.0496s net 0.1177s post 0.0009s
+INFO:root:testing 39/564 data 0.0461s net 0.1224s post 0.0005s
+INFO:root:testing 40/564 data 0.1497s net 0.1451s post 0.0003s
+INFO:root:testing 41/564 data 0.0478s net 0.1569s post 0.0005s
+INFO:root:testing 42/564 data 0.0477s net 0.1218s post 0.0004s
+INFO:root:testing 43/564 data 0.0461s net 0.1191s post 0.0007s
+INFO:root:testing 44/564 data 0.1547s net 0.1466s post 0.0004s
+INFO:root:testing 45/564 data 0.1569s net 0.1118s post 0.0010s
+INFO:root:testing 46/564 data 0.1521s net 0.1140s post 0.0003s
+INFO:root:testing 47/564 data 0.0491s net 0.1597s post 0.0005s
+INFO:root:testing 48/564 data 0.1538s net 0.1458s post 0.0003s
+INFO:root:testing 49/564 data 0.1534s net 0.1125s post 0.0004s
+INFO:root:testing 50/564 data 0.1522s net 0.1125s post 0.0003s
+INFO:root:testing 51/564 data 0.0581s net 0.1621s post 0.0008s
+INFO:root:testing 52/564 data 0.0502s net 0.1190s post 0.0008s
+INFO:root:testing 53/564 data 0.1586s net 0.1475s post 0.0004s
+INFO:root:testing 54/564 data 0.0469s net 0.1614s post 0.0007s
+INFO:root:testing 55/564 data 0.0454s net 0.1188s post 0.0008s
+INFO:root:testing 56/564 data 0.1501s net 0.1457s post 0.0004s
+INFO:root:testing 57/564 data 0.0501s net 0.1591s post 0.0006s
+INFO:root:testing 58/564 data 0.1510s net 0.1433s post 0.0002s
+INFO:root:testing 59/564 data 0.1518s net 0.1144s post 0.0008s
+INFO:root:testing 60/564 data 0.1537s net 0.1153s post 0.0007s
+INFO:root:testing 61/564 data 0.0458s net 0.1608s post 0.0007s
+INFO:root:testing 62/564 data 0.1478s net 0.1439s post 0.0005s
+INFO:root:testing 63/564 data 0.0448s net 0.1569s post 0.0005s
+INFO:root:testing 64/564 data 0.0486s net 0.1164s post 0.0009s
+INFO:root:testing 65/564 data 0.0443s net 0.1174s post 0.0006s
+INFO:root:testing 66/564 data 0.1527s net 0.1439s post 0.0002s
+INFO:root:testing 67/564 data 0.0449s net 0.1598s post 0.0002s
+INFO:root:testing 68/564 data 0.0481s net 0.1179s post 0.0008s
+INFO:root:testing 69/564 data 0.0434s net 0.1180s post 0.0006s
+INFO:root:testing 70/564 data 0.0456s net 0.1177s post 0.0007s
+INFO:root:testing 71/564 data 0.0499s net 0.1195s post 0.0009s
+INFO:root:testing 72/564 data 0.1546s net 0.1439s post 0.0006s
+INFO:root:testing 73/564 data 0.0487s net 0.1946s post 0.0003s
+INFO:root:testing 74/564 data 0.0477s net 0.1186s post 0.0006s
+INFO:root:testing 75/564 data 0.1539s net 0.1445s post 0.0004s
+INFO:root:testing 76/564 data 0.0483s net 0.1574s post 0.0005s
+INFO:root:testing 77/564 data 0.0464s net 0.1197s post 0.0005s
+INFO:root:testing 78/564 data 0.0466s net 0.1215s post 0.0006s
+INFO:root:testing 79/564 data 0.1534s net 0.1445s post 0.0003s
+INFO:root:testing 80/564 data 0.1519s net 0.1117s post 0.0004s
+INFO:root:testing 81/564 data 0.0506s net 0.1603s post 0.0005s
+INFO:root:testing 82/564 data 0.0467s net 0.1184s post 0.0006s
+INFO:root:testing 83/564 data 0.1524s net 0.1442s post 0.0005s
+INFO:root:testing 84/564 data 0.0470s net 0.1580s post 0.0008s
+INFO:root:testing 85/564 data 0.0478s net 0.1193s post 0.0006s
+INFO:root:testing 86/564 data 0.1534s net 0.1442s post 0.0007s
+INFO:root:testing 87/564 data 0.0475s net 0.1581s post 0.0004s
+INFO:root:testing 88/564 data 0.0475s net 0.1189s post 0.0005s
+INFO:root:testing 89/564 data 0.0486s net 0.1191s post 0.0005s
+INFO:root:testing 90/564 data 0.0464s net 0.1205s post 0.0004s
+INFO:root:testing 91/564 data 0.1504s net 0.1445s post 0.0008s
+INFO:root:testing 92/564 data 0.0464s net 0.1606s post 0.0001s
+INFO:root:testing 93/564 data 0.0484s net 0.1188s post 0.0004s
+INFO:root:testing 94/564 data 0.0454s net 0.1177s post 0.0006s
+INFO:root:testing 95/564 data 0.0503s net 0.1184s post 0.0005s
+INFO:root:testing 96/564 data 0.1501s net 0.1453s post 0.0006s
+INFO:root:testing 97/564 data 0.0566s net 0.1616s post 0.0005s
+INFO:root:testing 98/564 data 0.0506s net 0.1150s post 0.0005s
+INFO:root:testing 99/564 data 0.1627s net 0.1459s post 0.0003s
+INFO:root:testing 100/564 data 0.0479s net 0.1591s post 0.0004s
+INFO:root:testing 101/564 data 0.1535s net 0.1484s post 0.0009s
+INFO:root:testing 102/564 data 0.0511s net 0.1597s post 0.0005s
+INFO:root:testing 103/564 data 0.0460s net 0.1211s post 0.0006s
+INFO:root:testing 104/564 data 0.0462s net 0.1181s post 0.0006s
+INFO:root:testing 105/564 data 0.0456s net 0.1175s post 0.0004s
+INFO:root:testing 106/564 data 0.0504s net 0.1173s post 0.0006s
+INFO:root:testing 107/564 data 0.0458s net 0.1196s post 0.0006s
+INFO:root:testing 108/564 data 0.0467s net 0.1200s post 0.0005s
+INFO:root:testing 109/564 data 0.0457s net 0.1183s post 0.0006s
+INFO:root:testing 110/564 data 0.0446s net 0.1184s post 0.0007s
+INFO:root:testing 111/564 data 0.0454s net 0.1190s post 0.0007s
+INFO:root:testing 112/564 data 0.0464s net 0.1193s post 0.0008s
+INFO:root:testing 113/564 data 0.0456s net 0.1178s post 0.0004s
+INFO:root:testing 114/564 data 0.0467s net 0.1180s post 0.0005s
+INFO:root:testing 115/564 data 0.0494s net 0.1179s post 0.0007s
+INFO:root:testing 116/564 data 0.0510s net 0.1174s post 0.0007s
+INFO:root:testing 117/564 data 0.0455s net 0.1195s post 0.0004s
+INFO:root:testing 118/564 data 0.0456s net 0.1181s post 0.0006s
+INFO:root:testing 119/564 data 0.0505s net 0.1194s post 0.0004s
+INFO:root:testing 120/564 data 0.1547s net 0.1445s post 0.0006s
+INFO:root:testing 121/564 data 0.0449s net 0.1592s post 0.0005s
+INFO:root:testing 122/564 data 0.1532s net 0.1439s post 0.0003s
+INFO:root:testing 123/564 data 0.0456s net 0.1594s post 0.0006s
+INFO:root:testing 124/564 data 0.0454s net 0.1175s post 0.0005s
+INFO:root:testing 125/564 data 0.0468s net 0.1191s post 0.0004s
+INFO:root:testing 126/564 data 0.1553s net 0.1459s post 0.0003s
+INFO:root:testing 127/564 data 0.1536s net 0.1146s post 0.0006s
+INFO:root:testing 128/564 data 0.0477s net 0.1630s post 0.0004s
+INFO:root:testing 129/564 data 0.1543s net 0.1476s post 0.0007s
+INFO:root:testing 130/564 data 0.0464s net 0.1610s post 0.0003s
+INFO:root:testing 131/564 data 0.0494s net 0.1185s post 0.0010s
+INFO:root:testing 132/564 data 0.0474s net 0.1203s post 0.0006s
+INFO:root:testing 133/564 data 0.0470s net 0.1190s post 0.0005s
+INFO:root:testing 134/564 data 0.0464s net 0.1217s post 0.0008s
+INFO:root:testing 135/564 data 0.0473s net 0.1192s post 0.0007s
+INFO:root:testing 136/564 data 0.1484s net 0.1485s post 0.0007s
+INFO:root:testing 137/564 data 0.0469s net 0.1599s post 0.0004s
+INFO:root:testing 138/564 data 0.1525s net 0.1466s post 0.0005s
+INFO:root:testing 139/564 data 0.0457s net 0.1597s post 0.0004s
+INFO:root:testing 140/564 data 0.0467s net 0.1168s post 0.0006s
+INFO:root:testing 141/564 data 0.0457s net 0.1202s post 0.0004s
+INFO:root:testing 142/564 data 0.1500s net 0.1444s post 0.0003s
+INFO:root:testing 143/564 data 0.0448s net 0.1556s post 0.0008s
+INFO:root:testing 144/564 data 0.0451s net 0.1179s post 0.0005s
+INFO:root:testing 145/564 data 0.1540s net 0.1468s post 0.0004s
+INFO:root:testing 146/564 data 0.0576s net 0.1566s post 0.0005s
+INFO:root:testing 147/564 data 0.1620s net 0.1449s post 0.0005s
+INFO:root:testing 148/564 data 0.0462s net 0.1577s post 0.0006s
+INFO:root:testing 149/564 data 0.0497s net 0.1191s post 0.0005s
+INFO:root:testing 150/564 data 0.1554s net 0.1555s post 0.0003s
+INFO:root:testing 151/564 data 0.0499s net 0.1647s post 0.0004s
+INFO:root:testing 152/564 data 0.1562s net 0.1443s post 0.0005s
+INFO:root:testing 153/564 data 0.1510s net 0.1158s post 0.0003s
+INFO:root:testing 154/564 data 0.0446s net 0.1614s post 0.0004s
+INFO:root:testing 155/564 data 0.0462s net 0.1255s post 0.0008s
+INFO:root:testing 156/564 data 0.1534s net 0.1506s post 0.0003s
+INFO:root:testing 157/564 data 0.0494s net 0.1613s post 0.0008s
+INFO:root:testing 158/564 data 0.0518s net 0.1210s post 0.0006s
+INFO:root:testing 159/564 data 0.0512s net 0.1190s post 0.0006s
+INFO:root:testing 160/564 data 0.0501s net 0.1190s post 0.0005s
+INFO:root:testing 161/564 data 0.1533s net 0.1482s post 0.0004s
+INFO:root:testing 162/564 data 0.0483s net 0.1603s post 0.0006s
+INFO:root:testing 163/564 data 0.1519s net 0.1467s post 0.0005s
+INFO:root:testing 164/564 data 0.0462s net 0.1603s post 0.0006s
+INFO:root:testing 165/564 data 0.0464s net 0.1206s post 0.0004s
+INFO:root:testing 166/564 data 0.0471s net 0.1197s post 0.0005s
+INFO:root:testing 167/564 data 0.0456s net 0.1200s post 0.0005s
+INFO:root:testing 168/564 data 0.0500s net 0.1195s post 0.0007s
+INFO:root:testing 169/564 data 0.0452s net 0.1190s post 0.0009s
+INFO:root:testing 170/564 data 0.1500s net 0.1546s post 0.0004s
+INFO:root:testing 171/564 data 0.0564s net 0.1617s post 0.0005s
+INFO:root:testing 172/564 data 0.0507s net 0.1205s post 0.0005s
+INFO:root:testing 173/564 data 0.0520s net 0.1183s post 0.0005s
+INFO:root:testing 174/564 data 0.0454s net 0.1180s post 0.0005s
+INFO:root:testing 175/564 data 0.0457s net 0.1202s post 0.0005s
+INFO:root:testing 176/564 data 0.0498s net 0.1195s post 0.0005s
+INFO:root:testing 177/564 data 0.0470s net 0.1214s post 0.0005s
+INFO:root:testing 178/564 data 0.1639s net 0.1451s post 0.0004s
+INFO:root:testing 179/564 data 0.1524s net 0.1161s post 0.0004s
+INFO:root:testing 180/564 data 0.0467s net 0.1632s post 0.0002s
+INFO:root:testing 181/564 data 0.1511s net 0.1473s post 0.0004s
+INFO:root:testing 182/564 data 0.0505s net 0.1642s post 0.0005s
+INFO:root:testing 183/564 data 0.0499s net 0.1192s post 0.0008s
+INFO:root:testing 184/564 data 0.0466s net 0.1242s post 0.0004s
+INFO:root:testing 185/564 data 0.1555s net 0.1491s post 0.0002s
+INFO:root:testing 186/564 data 0.1554s net 0.1170s post 0.0006s
+INFO:root:testing 187/564 data 0.1500s net 0.1127s post 0.0005s
+INFO:root:testing 188/564 data 0.1555s net 0.1119s post 0.0006s
+INFO:root:testing 189/564 data 0.0471s net 0.1651s post 0.0007s
+INFO:root:testing 190/564 data 0.0461s net 0.1205s post 0.0006s
+INFO:root:testing 191/564 data 0.0488s net 0.1205s post 0.0005s
+INFO:root:testing 192/564 data 0.1538s net 0.1469s post 0.0006s
+INFO:root:testing 193/564 data 0.0513s net 0.1597s post 0.0004s
+INFO:root:testing 194/564 data 0.0461s net 0.1188s post 0.0007s
+INFO:root:testing 195/564 data 0.0468s net 0.1176s post 0.0006s
+INFO:root:testing 196/564 data 0.0465s net 0.1188s post 0.0004s
+INFO:root:testing 197/564 data 0.0458s net 0.1187s post 0.0005s
+INFO:root:testing 198/564 data 0.0451s net 0.1216s post 0.0006s
+INFO:root:testing 199/564 data 0.0472s net 0.1221s post 0.0006s
+INFO:root:testing 200/564 data 0.0476s net 0.1191s post 0.0008s
+INFO:root:testing 201/564 data 0.0460s net 0.1194s post 0.0004s
+INFO:root:testing 202/564 data 0.0463s net 0.1213s post 0.0006s
+INFO:root:testing 203/564 data 0.1563s net 0.1480s post 0.0005s
+INFO:root:testing 204/564 data 0.1524s net 0.1133s post 0.0009s
+INFO:root:testing 205/564 data 0.0472s net 0.1599s post 0.0005s
+INFO:root:testing 206/564 data 0.0514s net 0.1211s post 0.0004s
+INFO:root:testing 207/564 data 0.0451s net 0.1209s post 0.0005s
+INFO:root:testing 208/564 data 0.0457s net 0.1218s post 0.0005s
+INFO:root:testing 209/564 data 0.0459s net 0.1198s post 0.0008s
+INFO:root:testing 210/564 data 0.0504s net 0.1196s post 0.0004s
+INFO:root:testing 211/564 data 0.0489s net 0.1197s post 0.0005s
+INFO:root:testing 212/564 data 0.1523s net 0.1550s post 0.0012s
+INFO:root:testing 213/564 data 0.0614s net 0.1566s post 0.0005s
+INFO:root:testing 214/564 data 0.0502s net 0.1229s post 0.0005s
+INFO:root:testing 215/564 data 0.0476s net 0.1201s post 0.0004s
+INFO:root:testing 216/564 data 0.0501s net 0.1203s post 0.0006s
+INFO:root:testing 217/564 data 0.0488s net 0.1198s post 0.0005s
+INFO:root:testing 218/564 data 0.0470s net 0.1217s post 0.0006s
+INFO:root:testing 219/564 data 0.0499s net 0.1235s post 0.0005s
+INFO:root:testing 220/564 data 0.0474s net 0.1194s post 0.0005s
+INFO:root:testing 221/564 data 0.0479s net 0.1188s post 0.0006s
+INFO:root:testing 222/564 data 0.1652s net 0.1517s post 0.0005s
+INFO:root:testing 223/564 data 0.1519s net 0.1129s post 0.0005s
+INFO:root:testing 224/564 data 0.0473s net 0.1607s post 0.0005s
+INFO:root:testing 225/564 data 0.0491s net 0.1201s post 0.0004s
+INFO:root:testing 226/564 data 0.0460s net 0.1229s post 0.0006s
+INFO:root:testing 227/564 data 0.0463s net 0.1201s post 0.0005s
+INFO:root:testing 228/564 data 0.0414s net 0.1288s post 0.0003s
+INFO:root:testing 229/564 data 0.0471s net 0.1208s post 0.0007s
+INFO:root:testing 230/564 data 0.0464s net 0.1224s post 0.0009s
+INFO:root:testing 231/564 data 0.0458s net 0.1225s post 0.0005s
+INFO:root:testing 232/564 data 0.1518s net 0.1493s post 0.0007s
+INFO:root:testing 233/564 data 0.0475s net 0.1928s post 0.0004s
+INFO:root:testing 234/564 data 0.0467s net 0.1210s post 0.0005s
+INFO:root:testing 235/564 data 0.0458s net 0.1191s post 0.0004s
+INFO:root:testing 236/564 data 0.0462s net 0.1213s post 0.0004s
+INFO:root:testing 237/564 data 0.0458s net 0.1200s post 0.0007s
+INFO:root:testing 238/564 data 0.0502s net 0.1188s post 0.0007s
+INFO:root:testing 239/564 data 0.0486s net 0.1204s post 0.0005s
+INFO:root:testing 240/564 data 0.0460s net 0.1205s post 0.0005s
+INFO:root:testing 241/564 data 0.0493s net 0.1191s post 0.0005s
+INFO:root:testing 242/564 data 0.0453s net 0.1218s post 0.0007s
+INFO:root:testing 243/564 data 0.0486s net 0.1190s post 0.0005s
+INFO:root:testing 244/564 data 0.0454s net 0.1199s post 0.0005s
+INFO:root:testing 245/564 data 0.0454s net 0.1212s post 0.0007s
+INFO:root:testing 246/564 data 0.0477s net 0.1195s post 0.0005s
+INFO:root:testing 247/564 data 0.0451s net 0.1203s post 0.0004s
+INFO:root:testing 248/564 data 0.0474s net 0.1198s post 0.0010s
+INFO:root:testing 249/564 data 0.1559s net 0.1489s post 0.0009s
+INFO:root:testing 250/564 data 0.0473s net 0.1598s post 0.0005s
+INFO:root:testing 251/564 data 0.0471s net 0.1210s post 0.0004s
+INFO:root:testing 252/564 data 0.0502s net 0.1189s post 0.0006s
+INFO:root:testing 253/564 data 0.0458s net 0.1199s post 0.0007s
+INFO:root:testing 254/564 data 0.0452s net 0.1213s post 0.0002s
+INFO:root:testing 255/564 data 0.0472s net 0.1195s post 0.0004s
+INFO:root:testing 256/564 data 0.0486s net 0.1189s post 0.0005s
+INFO:root:testing 257/564 data 0.0466s net 0.1192s post 0.0007s
+INFO:root:testing 258/564 data 0.0493s net 0.1199s post 0.0007s
+INFO:root:testing 259/564 data 0.1539s net 0.1484s post 0.0004s
+INFO:root:testing 260/564 data 0.1571s net 0.1138s post 0.0006s
+INFO:root:testing 261/564 data 0.0471s net 0.1612s post 0.0008s
+INFO:root:testing 262/564 data 0.0484s net 0.1207s post 0.0007s
+INFO:root:testing 263/564 data 0.0480s net 0.1194s post 0.0005s
+INFO:root:testing 264/564 data 0.0458s net 0.1213s post 0.0005s
+INFO:root:testing 265/564 data 0.0464s net 0.1211s post 0.0004s
+INFO:root:testing 266/564 data 0.1512s net 0.1485s post 0.0008s
+INFO:root:testing 267/564 data 0.0470s net 0.1595s post 0.0005s
+INFO:root:testing 268/564 data 0.0472s net 0.1212s post 0.0006s
+INFO:root:testing 269/564 data 0.0457s net 0.1214s post 0.0009s
+INFO:root:testing 270/564 data 0.0463s net 0.1181s post 0.0005s
+INFO:root:testing 271/564 data 0.1567s net 0.1559s post 0.0005s
+INFO:root:testing 272/564 data 0.1669s net 0.1175s post 0.0009s
+INFO:root:testing 273/564 data 0.0528s net 0.1642s post 0.0005s
+INFO:root:testing 274/564 data 0.1526s net 0.1509s post 0.0006s
+INFO:root:testing 275/564 data 0.0455s net 0.1620s post 0.0003s
+INFO:root:testing 276/564 data 0.0457s net 0.1228s post 0.0005s
+INFO:root:testing 277/564 data 0.1538s net 0.1498s post 0.0005s
+INFO:root:testing 278/564 data 0.0470s net 0.1615s post 0.0006s
+INFO:root:testing 279/564 data 0.1526s net 0.1476s post 0.0004s
+INFO:root:testing 280/564 data 0.0464s net 0.1607s post 0.0006s
+INFO:root:testing 281/564 data 0.0453s net 0.1217s post 0.0005s
+INFO:root:testing 282/564 data 0.0509s net 0.1213s post 0.0006s
+INFO:root:testing 283/564 data 0.1535s net 0.1494s post 0.0002s
+INFO:root:testing 284/564 data 0.0484s net 0.1612s post 0.0005s
+INFO:root:testing 285/564 data 0.0459s net 0.1196s post 0.0005s
+INFO:root:testing 286/564 data 0.0461s net 0.1198s post 0.0006s
+INFO:root:testing 287/564 data 0.0471s net 0.1212s post 0.0007s
+INFO:root:testing 288/564 data 0.0495s net 0.1198s post 0.0004s
+INFO:root:testing 289/564 data 0.0467s net 0.1190s post 0.0006s
+INFO:root:testing 290/564 data 0.0464s net 0.1198s post 0.0007s
+INFO:root:testing 291/564 data 0.0458s net 0.1207s post 0.0004s
+INFO:root:testing 292/564 data 0.1552s net 0.1466s post 0.0007s
+INFO:root:testing 293/564 data 0.1540s net 0.1135s post 0.0007s
+INFO:root:testing 294/564 data 0.1554s net 0.1121s post 0.0004s
+INFO:root:testing 295/564 data 0.1527s net 0.1141s post 0.0004s
+INFO:root:testing 296/564 data 0.0508s net 0.1596s post 0.0004s
+INFO:root:testing 297/564 data 0.1503s net 0.1483s post 0.0002s
+INFO:root:testing 298/564 data 0.1539s net 0.1138s post 0.0005s
+INFO:root:testing 299/564 data 0.0466s net 0.1620s post 0.0006s
+INFO:root:testing 300/564 data 0.0463s net 0.1192s post 0.0003s
+INFO:root:testing 301/564 data 0.0504s net 0.1167s post 0.0005s
+INFO:root:testing 302/564 data 0.0469s net 0.1174s post 0.0005s
+INFO:root:testing 303/564 data 0.0474s net 0.1183s post 0.0006s
+INFO:root:testing 304/564 data 0.0484s net 0.1167s post 0.0006s
+INFO:root:testing 305/564 data 0.0455s net 0.1174s post 0.0005s
+INFO:root:testing 306/564 data 0.0461s net 0.1178s post 0.0004s
+INFO:root:testing 307/564 data 0.0455s net 0.1164s post 0.0004s
+INFO:root:testing 308/564 data 0.0452s net 0.1183s post 0.0007s
+INFO:root:testing 309/564 data 0.1542s net 0.1447s post 0.0006s
+INFO:root:testing 310/564 data 0.0457s net 0.1591s post 0.0004s
+INFO:root:testing 311/564 data 0.0513s net 0.1182s post 0.0009s
+INFO:root:testing 312/564 data 0.0465s net 0.1182s post 0.0006s
+INFO:root:testing 313/564 data 0.1499s net 0.1450s post 0.0007s
+INFO:root:testing 314/564 data 0.1510s net 0.1181s post 0.0004s
+INFO:root:testing 315/564 data 0.0557s net 0.1642s post 0.0006s
+INFO:root:testing 316/564 data 0.0494s net 0.1214s post 0.0005s
+INFO:root:testing 317/564 data 0.1618s net 0.1501s post 0.0006s
+INFO:root:testing 318/564 data 0.1534s net 0.1141s post 0.0004s
+INFO:root:testing 319/564 data 0.0470s net 0.1661s post 0.0004s
+INFO:root:testing 320/564 data 0.1574s net 0.1482s post 0.0006s
+INFO:root:testing 321/564 data 0.1527s net 0.1128s post 0.0002s
+INFO:root:testing 322/564 data 0.0457s net 0.1609s post 0.0005s
+INFO:root:testing 323/564 data 0.1524s net 0.1446s post 0.0004s
+INFO:root:testing 324/564 data 0.0513s net 0.1571s post 0.0004s
+INFO:root:testing 325/564 data 0.1523s net 0.1458s post 0.0011s
+INFO:root:testing 326/564 data 0.0510s net 0.1567s post 0.0003s
+INFO:root:testing 327/564 data 0.0494s net 0.1177s post 0.0006s
+INFO:root:testing 328/564 data 0.0459s net 0.1174s post 0.0007s
+INFO:root:testing 329/564 data 0.0452s net 0.1182s post 0.0004s
+INFO:root:testing 330/564 data 0.0478s net 0.1185s post 0.0007s
+INFO:root:testing 331/564 data 0.1518s net 0.1444s post 0.0003s
+INFO:root:testing 332/564 data 0.0445s net 0.1587s post 0.0005s
+INFO:root:testing 333/564 data 0.0472s net 0.1173s post 0.0004s
+INFO:root:testing 334/564 data 0.0480s net 0.1194s post 0.0007s
+INFO:root:testing 335/564 data 0.0454s net 0.1183s post 0.0006s
+INFO:root:testing 336/564 data 0.1542s net 0.1446s post 0.0006s
+INFO:root:testing 337/564 data 0.0453s net 0.1591s post 0.0008s
+INFO:root:testing 338/564 data 0.0467s net 0.1184s post 0.0008s
+INFO:root:testing 339/564 data 0.0470s net 0.1172s post 0.0005s
+INFO:root:testing 340/564 data 0.0503s net 0.1171s post 0.0007s
+INFO:root:testing 341/564 data 0.0460s net 0.1181s post 0.0005s
+INFO:root:testing 342/564 data 0.0453s net 0.1188s post 0.0007s
+INFO:root:testing 343/564 data 0.0505s net 0.1176s post 0.0006s
+INFO:root:testing 344/564 data 0.1529s net 0.1453s post 0.0006s
+INFO:root:testing 345/564 data 0.0451s net 0.1589s post 0.0004s
+INFO:root:testing 346/564 data 0.0472s net 0.1179s post 0.0008s
+INFO:root:testing 347/564 data 0.0453s net 0.1177s post 0.0005s
+INFO:root:testing 348/564 data 0.0461s net 0.1203s post 0.0007s
+INFO:root:testing 349/564 data 0.0505s net 0.1177s post 0.0005s
+INFO:root:testing 350/564 data 0.0460s net 0.1186s post 0.0004s
+INFO:root:testing 351/564 data 0.1541s net 0.1448s post 0.0006s
+INFO:root:testing 352/564 data 0.1508s net 0.1130s post 0.0006s
+INFO:root:testing 353/564 data 0.0470s net 0.1623s post 0.0005s
+INFO:root:testing 354/564 data 0.1556s net 0.1489s post 0.0011s
+INFO:root:testing 355/564 data 0.0518s net 0.1598s post 0.0006s
+INFO:root:testing 356/564 data 0.0515s net 0.1232s post 0.0004s
+INFO:root:testing 357/564 data 0.0465s net 0.1218s post 0.0007s
+INFO:root:testing 358/564 data 0.1550s net 0.1468s post 0.0004s
+INFO:root:testing 359/564 data 0.1539s net 0.1136s post 0.0004s
+INFO:root:testing 360/564 data 0.0455s net 0.1659s post 0.0009s
+INFO:root:testing 361/564 data 0.0481s net 0.1207s post 0.0005s
+INFO:root:testing 362/564 data 0.1550s net 0.1477s post 0.0005s
+INFO:root:testing 363/564 data 0.0462s net 0.1581s post 0.0005s
+INFO:root:testing 364/564 data 0.0465s net 0.1213s post 0.0007s
+INFO:root:testing 365/564 data 0.1546s net 0.1479s post 0.0008s
+INFO:root:testing 366/564 data 0.1501s net 0.1141s post 0.0006s
+INFO:root:testing 367/564 data 0.0514s net 0.1588s post 0.0006s
+INFO:root:testing 368/564 data 0.0507s net 0.1176s post 0.0006s
+INFO:root:testing 369/564 data 0.0457s net 0.1193s post 0.0002s
+INFO:root:testing 370/564 data 0.0460s net 0.1177s post 0.0007s
+INFO:root:testing 371/564 data 0.1499s net 0.1455s post 0.0004s
+INFO:root:testing 372/564 data 0.0448s net 0.1604s post 0.0004s
+INFO:root:testing 373/564 data 0.0477s net 0.1183s post 0.0006s
+INFO:root:testing 374/564 data 0.0462s net 0.1184s post 0.0006s
+INFO:root:testing 375/564 data 0.0455s net 0.1175s post 0.0004s
+INFO:root:testing 376/564 data 0.0455s net 0.1186s post 0.0004s
+INFO:root:testing 377/564 data 0.1532s net 0.1452s post 0.0002s
+INFO:root:testing 378/564 data 0.0519s net 0.1568s post 0.0005s
+INFO:root:testing 379/564 data 0.1532s net 0.1444s post 0.0004s
+INFO:root:testing 380/564 data 0.1559s net 0.1119s post 0.0005s
+INFO:root:testing 381/564 data 0.0485s net 0.1627s post 0.0006s
+INFO:root:testing 382/564 data 0.1531s net 0.1479s post 0.0003s
+INFO:root:testing 383/564 data 0.0470s net 0.1598s post 0.0004s
+INFO:root:testing 384/564 data 0.0473s net 0.1198s post 0.0005s
+INFO:root:testing 385/564 data 0.0465s net 0.1210s post 0.0005s
+INFO:root:testing 386/564 data 0.1559s net 0.1468s post 0.0010s
+INFO:root:testing 387/564 data 0.0467s net 0.1599s post 0.0006s
+INFO:root:testing 388/564 data 0.0474s net 0.1233s post 0.0006s
+INFO:root:testing 389/564 data 0.0505s net 0.1187s post 0.0005s
+INFO:root:testing 390/564 data 0.1552s net 0.1440s post 0.0004s
+INFO:root:testing 391/564 data 0.1528s net 0.1151s post 0.0003s
+INFO:root:testing 392/564 data 0.0458s net 0.1620s post 0.0006s
+INFO:root:testing 393/564 data 0.0465s net 0.1242s post 0.0006s
+INFO:root:testing 394/564 data 0.0448s net 0.1212s post 0.0006s
+INFO:root:testing 395/564 data 0.0462s net 0.1198s post 0.0006s
+INFO:root:testing 396/564 data 0.0451s net 0.1202s post 0.0006s
+INFO:root:testing 397/564 data 0.0502s net 0.1189s post 0.0007s
+INFO:root:testing 398/564 data 0.0454s net 0.1236s post 0.0006s
+INFO:root:testing 399/564 data 0.0602s net 0.1191s post 0.0007s
+INFO:root:testing 400/564 data 0.0477s net 0.1195s post 0.0005s
+INFO:root:testing 401/564 data 0.0455s net 0.1185s post 0.0005s
+INFO:root:testing 402/564 data 0.0453s net 0.1211s post 0.0005s
+INFO:root:testing 403/564 data 0.1655s net 0.1794s post 0.0007s
+INFO:root:testing 404/564 data 0.1474s net 0.1152s post 0.0004s
+INFO:root:testing 405/564 data 0.0478s net 0.1630s post 0.0003s
+INFO:root:testing 406/564 data 0.1487s net 0.1483s post 0.0005s
+INFO:root:testing 407/564 data 0.0516s net 0.1635s post 0.0004s
+INFO:root:testing 408/564 data 0.0488s net 0.1203s post 0.0005s
+INFO:root:testing 409/564 data 0.0461s net 0.1217s post 0.0007s
+INFO:root:testing 410/564 data 0.0461s net 0.1222s post 0.0005s
+INFO:root:testing 411/564 data 0.1564s net 0.1506s post 0.0004s
+INFO:root:testing 412/564 data 0.0461s net 0.1639s post 0.0003s
+INFO:root:testing 413/564 data 0.0495s net 0.1185s post 0.0006s
+INFO:root:testing 414/564 data 0.0457s net 0.1206s post 0.0006s
+INFO:root:testing 415/564 data 0.0463s net 0.1208s post 0.0003s
+INFO:root:testing 416/564 data 0.0471s net 0.1189s post 0.0005s
+INFO:root:testing 417/564 data 0.0462s net 0.1196s post 0.0007s
+INFO:root:testing 418/564 data 0.0464s net 0.1213s post 0.0004s
+INFO:root:testing 419/564 data 0.0456s net 0.1187s post 0.0006s
+INFO:root:testing 420/564 data 0.1528s net 0.1484s post 0.0003s
+INFO:root:testing 421/564 data 0.0516s net 0.1601s post 0.0006s
+INFO:root:testing 422/564 data 0.0467s net 0.1201s post 0.0005s
+INFO:root:testing 423/564 data 0.0477s net 0.1192s post 0.0005s
+INFO:root:testing 424/564 data 0.1542s net 0.1487s post 0.0002s
+INFO:root:testing 425/564 data 0.0466s net 0.1597s post 0.0005s
+INFO:root:testing 426/564 data 0.0483s net 0.1213s post 0.0007s
+INFO:root:testing 427/564 data 0.0468s net 0.1205s post 0.0006s
+INFO:root:testing 428/564 data 0.1538s net 0.1484s post 0.0007s
+INFO:root:testing 429/564 data 0.0470s net 0.1661s post 0.0004s
+INFO:root:testing 430/564 data 0.0470s net 0.1188s post 0.0005s
+INFO:root:testing 431/564 data 0.0492s net 0.1182s post 0.0007s
+INFO:root:testing 432/564 data 0.0457s net 0.1234s post 0.0005s
+INFO:root:testing 433/564 data 0.0500s net 0.1205s post 0.0005s
+INFO:root:testing 434/564 data 0.1564s net 0.1442s post 0.0006s
+INFO:root:testing 435/564 data 0.1523s net 0.1139s post 0.0004s
+INFO:root:testing 436/564 data 0.1534s net 0.1140s post 0.0005s
+INFO:root:testing 437/564 data 0.1522s net 0.1123s post 0.0006s
+INFO:root:testing 438/564 data 0.0500s net 0.1624s post 0.0007s
+INFO:root:testing 439/564 data 0.0501s net 0.1200s post 0.0005s
+INFO:root:testing 440/564 data 0.1528s net 0.1473s post 0.0006s
+INFO:root:testing 441/564 data 0.0454s net 0.1605s post 0.0001s
+INFO:root:testing 442/564 data 0.0500s net 0.1255s post 0.0007s
+INFO:root:testing 443/564 data 0.1530s net 0.1453s post 0.0003s
+INFO:root:testing 444/564 data 0.0466s net 0.1615s post 0.0003s
+INFO:root:testing 445/564 data 0.0463s net 0.1186s post 0.0006s
+INFO:root:testing 446/564 data 0.0511s net 0.1181s post 0.0005s
+INFO:root:testing 447/564 data 0.0466s net 0.1202s post 0.0007s
+INFO:root:testing 448/564 data 0.0463s net 0.1183s post 0.0005s
+INFO:root:testing 449/564 data 0.1531s net 0.1445s post 0.0006s
+INFO:root:testing 450/564 data 0.0463s net 0.1589s post 0.0006s
+INFO:root:testing 451/564 data 0.1496s net 0.1446s post 0.0003s
+INFO:root:testing 452/564 data 0.0550s net 0.1633s post 0.0004s
+INFO:root:testing 453/564 data 0.0488s net 0.1181s post 0.0005s
+INFO:root:testing 454/564 data 0.0458s net 0.1195s post 0.0004s
+INFO:root:testing 455/564 data 0.0455s net 0.1186s post 0.0004s
+INFO:root:testing 456/564 data 0.0456s net 0.1216s post 0.0005s
+INFO:root:testing 457/564 data 0.1640s net 0.1479s post 0.0012s
+INFO:root:testing 458/564 data 0.1505s net 0.1140s post 0.0002s
+INFO:root:testing 459/564 data 0.0463s net 0.1617s post 0.0005s
+INFO:root:testing 460/564 data 0.0449s net 0.1196s post 0.0006s
+INFO:root:testing 461/564 data 0.0486s net 0.1215s post 0.0006s
+INFO:root:testing 462/564 data 0.0473s net 0.1187s post 0.0004s
+INFO:root:testing 463/564 data 0.0450s net 0.1192s post 0.0005s
+INFO:root:testing 464/564 data 0.0487s net 0.1216s post 0.0005s
+INFO:root:testing 465/564 data 0.0465s net 0.1181s post 0.0006s
+INFO:root:testing 466/564 data 0.1542s net 0.1473s post 0.0004s
+INFO:root:testing 467/564 data 0.0450s net 0.1616s post 0.0001s
+INFO:root:testing 468/564 data 0.1517s net 0.1467s post 0.0003s
+INFO:root:testing 469/564 data 0.1532s net 0.1149s post 0.0009s
+INFO:root:testing 470/564 data 0.0470s net 0.1631s post 0.0005s
+INFO:root:testing 471/564 data 0.0468s net 0.1229s post 0.0005s
+INFO:root:testing 472/564 data 0.0500s net 0.1194s post 0.0006s
+INFO:root:testing 473/564 data 0.0450s net 0.1251s post 0.0005s
+INFO:root:testing 474/564 data 0.1558s net 0.1461s post 0.0011s
+INFO:root:testing 475/564 data 0.0469s net 0.1557s post 0.0006s
+INFO:root:testing 476/564 data 0.0505s net 0.1233s post 0.0005s
+INFO:root:testing 477/564 data 0.0492s net 0.1213s post 0.0004s
+INFO:root:testing 478/564 data 0.0473s net 0.1219s post 0.0007s
+INFO:root:testing 479/564 data 0.0480s net 0.1208s post 0.0005s
+INFO:root:testing 480/564 data 0.0504s net 0.1211s post 0.0006s
+INFO:root:testing 481/564 data 0.1533s net 0.1478s post 0.0003s
+INFO:root:testing 482/564 data 0.0495s net 0.1594s post 0.0004s
+INFO:root:testing 483/564 data 0.0510s net 0.1211s post 0.0006s
+INFO:root:testing 484/564 data 0.0457s net 0.1186s post 0.0007s
+INFO:root:testing 485/564 data 0.1514s net 0.1482s post 0.0002s
+INFO:root:testing 486/564 data 0.0508s net 0.1605s post 0.0004s
+INFO:root:testing 487/564 data 0.0511s net 0.1199s post 0.0008s
+INFO:root:testing 488/564 data 0.0465s net 0.1196s post 0.0004s
+INFO:root:testing 489/564 data 0.0492s net 0.1187s post 0.0005s
+INFO:root:testing 490/564 data 0.0495s net 0.1193s post 0.0006s
+INFO:root:testing 491/564 data 0.0495s net 0.1208s post 0.0007s
+INFO:root:testing 492/564 data 0.0459s net 0.1187s post 0.0005s
+INFO:root:testing 493/564 data 0.1491s net 0.1471s post 0.0005s
+INFO:root:testing 494/564 data 0.0474s net 0.1595s post 0.0003s
+INFO:root:testing 495/564 data 0.0466s net 0.1201s post 0.0005s
+INFO:root:testing 496/564 data 0.0456s net 0.1193s post 0.0005s
+INFO:root:testing 497/564 data 0.0453s net 0.1212s post 0.0007s
+INFO:root:testing 498/564 data 0.0484s net 0.1184s post 0.0005s
+INFO:root:testing 499/564 data 0.0453s net 0.1194s post 0.0004s
+INFO:root:testing 500/564 data 0.0497s net 0.1195s post 0.0005s
+INFO:root:testing 501/564 data 0.0501s net 0.1187s post 0.0006s
+INFO:root:testing 502/564 data 0.0510s net 0.1192s post 0.0005s
+INFO:root:testing 503/564 data 0.0454s net 0.1194s post 0.0005s
+INFO:root:testing 504/564 data 0.1533s net 0.1478s post 0.0003s
+INFO:root:testing 505/564 data 0.0468s net 0.1598s post 0.0004s
+INFO:root:testing 506/564 data 0.0520s net 0.1188s post 0.0005s
+INFO:root:testing 507/564 data 0.0485s net 0.1188s post 0.0004s
+INFO:root:testing 508/564 data 0.1508s net 0.1467s post 0.0005s
+INFO:root:testing 509/564 data 0.0464s net 0.1598s post 0.0004s
+INFO:root:testing 510/564 data 0.0508s net 0.1186s post 0.0007s
+INFO:root:testing 511/564 data 0.0460s net 0.1186s post 0.0004s
+INFO:root:testing 512/564 data 0.1531s net 0.1479s post 0.0008s
+INFO:root:testing 513/564 data 0.0469s net 0.1586s post 0.0003s
+INFO:root:testing 514/564 data 0.0530s net 0.1247s post 0.0007s
+INFO:root:testing 515/564 data 0.0553s net 0.1235s post 0.0006s
+INFO:root:testing 516/564 data 0.0524s net 0.1190s post 0.0004s
+INFO:root:testing 517/564 data 0.1638s net 0.1451s post 0.0009s
+INFO:root:testing 518/564 data 0.0461s net 0.1582s post 0.0004s
+INFO:root:testing 519/564 data 0.0479s net 0.1203s post 0.0009s
+INFO:root:testing 520/564 data 0.0464s net 0.1186s post 0.0006s
+INFO:root:testing 521/564 data 0.0483s net 0.1181s post 0.0005s
+INFO:root:testing 522/564 data 0.0458s net 0.1181s post 0.0004s
+INFO:root:testing 523/564 data 0.0456s net 0.1221s post 0.0004s
+INFO:root:testing 524/564 data 0.0478s net 0.1185s post 0.0006s
+INFO:root:testing 525/564 data 0.0455s net 0.1179s post 0.0005s
+INFO:root:testing 526/564 data 0.0468s net 0.1199s post 0.0004s
+INFO:root:testing 527/564 data 0.0509s net 0.1174s post 0.0007s
+INFO:root:testing 528/564 data 0.0498s net 0.1205s post 0.0008s
+INFO:root:testing 529/564 data 0.0474s net 0.1207s post 0.0005s
+INFO:root:testing 530/564 data 0.1549s net 0.1454s post 0.0007s
+INFO:root:testing 531/564 data 0.1539s net 0.1155s post 0.0007s
+INFO:root:testing 532/564 data 0.0476s net 0.1623s post 0.0004s
+INFO:root:testing 533/564 data 0.0467s net 0.1201s post 0.0005s
+INFO:root:testing 534/564 data 0.0469s net 0.1197s post 0.0006s
+INFO:root:testing 535/564 data 0.1530s net 0.1476s post 0.0006s
+INFO:root:testing 536/564 data 0.0495s net 0.1598s post 0.0004s
+INFO:root:testing 537/564 data 0.0461s net 0.1202s post 0.0007s
+INFO:root:testing 538/564 data 0.0464s net 0.1206s post 0.0006s
+INFO:root:testing 539/564 data 0.1539s net 0.1467s post 0.0009s
+INFO:root:testing 540/564 data 0.0474s net 0.1594s post 0.0005s
+INFO:root:testing 541/564 data 0.1514s net 0.1469s post 0.0002s
+INFO:root:testing 542/564 data 0.0451s net 0.1593s post 0.0003s
+INFO:root:testing 543/564 data 0.1536s net 0.1469s post 0.0005s
+INFO:root:testing 544/564 data 0.1527s net 0.1127s post 0.0007s
+INFO:root:testing 545/564 data 0.0465s net 0.1597s post 0.0005s
+INFO:root:testing 546/564 data 0.1515s net 0.1487s post 0.0002s
+INFO:root:testing 547/564 data 0.1532s net 0.1114s post 0.0003s
+INFO:root:testing 548/564 data 0.1533s net 0.1141s post 0.0002s
+INFO:root:testing 549/564 data 0.0451s net 0.1629s post 0.0003s
+INFO:root:testing 550/564 data 0.0479s net 0.1225s post 0.0007s
+INFO:root:testing 551/564 data 0.0470s net 0.1206s post 0.0005s
+INFO:root:testing 552/564 data 0.0458s net 0.1189s post 0.0004s
+INFO:root:testing 553/564 data 0.1496s net 0.1488s post 0.0004s
+INFO:root:testing 554/564 data 0.1533s net 0.1140s post 0.0005s
+INFO:root:testing 555/564 data 0.0467s net 0.1618s post 0.0003s
+INFO:root:testing 556/564 data 0.1527s net 0.1457s post 0.0004s
+INFO:root:testing 557/564 data 0.0450s net 0.1616s post 0.0003s
+INFO:root:testing 558/564 data 0.0477s net 0.1186s post 0.0002s
+INFO:root:testing 559/564 data 0.0489s net 0.1173s post 0.0006s
+INFO:root:testing 560/564 data 0.0457s net 0.1188s post 0.0006s
+INFO:root:testing 561/564 data 0.1577s net 0.1461s post 0.0004s
+INFO:root:testing 562/564 data 0.0509s net 0.1923s post 0.0004s
+INFO:root:testing 563/564 data 0.0461s net 0.1226s post 0.0005s
+INFO:root:Writing uav VOC results file
+INFO:root:Writing circle VOC results file
+INFO:root:VOC07 metric? Y
+INFO:root:AP for uav = 0.8772
+INFO:root:AP for circle = 0.4270
+INFO:root:Mean AP = 0.6521

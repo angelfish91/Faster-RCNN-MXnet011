@@ -1,0 +1,1 @@
+./sparrow/test_total.sh: line 15: ython: command not found
