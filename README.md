@@ -1,6 +1,6 @@
 # Faster R-CNN in MXNet with distributed implementation and data parallelization
 
-![example detections](https://cloud.githubusercontent.com/assets/13162287/22101032/92085dc0-de6c-11e6-9228-67e72606ddbc.png)
+![example detections](https://github.com/angelfish91/Faster-RCNN-MXnet011/example/1.jpg)
 
 ## Why?
 There exist good implementations of Faster R-CNN yet they lack support for recent 
